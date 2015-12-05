@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: Bookcrossing
+        psr4_prefix: Bookcrossing
+        src_path: app
