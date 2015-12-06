@@ -108,6 +108,36 @@
     </div>
 
     <div class="row">
+
+        </div>
+        <div class="col-lg-3">
+            <div style="padding: 5px" id="vk_post_-@yield('post_id')"></div>
+            <script type="text/javascript">
+                (function (d, s, id) {
+                    var js, fjs = d.getElementsByTagName(s)[0];
+                    if (d.getElementById(id)) return;
+                    js = d.createElement(s);
+                    js.id = id;
+                    js.src = "//vk.com/js/api/openapi.js?116";
+                    fjs.parentNode.insertBefore(js, fjs);
+                }(document, 'script', 'vk_openapi_js'));
+                (function () {
+                    if (!window.VK || !VK.Widgets || !VK.Widgets.Post || !VK.Widgets.Post("vk_post_-98669376_4", -98669376, 4, 'dl9-rKUkDGATMgUJZoXF2_9TAHU', {width: 280})) setTimeout(arguments.callee, 50);
+                }());
+            </script>
+            <div style="padding: 5px" id="vk_groups" class="center-block"></div>
+            <script type="text/javascript">
+                VK.Widgets.Group("vk_groups", {
+                    mode: 0,
+                    width: "220",
+                    height: "400",
+                    color1: 'FFFFFF',
+                    color2: '2B587A',
+                    color3: '5B7FA6'
+                }, 96921760);
+            </script>
+        </div>
+    </div>
     <hr>
     <footer>
         <p class="pull-right"><a href="#">Піднятись вгору</a></p>
@@ -115,7 +145,6 @@
         <div id="vk_subscribe"></div>
         <div id="vk_subscribe2"></div>
     </footer>
-</div>
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script type="text/javascript">
