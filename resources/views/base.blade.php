@@ -108,7 +108,9 @@
     </div>
 
     <div class="row">
-
+        <div class="col-lg-9">
+            @section('main')
+            @stop
         </div>
         <div class="col-lg-3">
             <div style="padding: 5px" id="vk_post_-@yield('post_id')"></div>
