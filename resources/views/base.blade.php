@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="Буккросинг міста Бар">
+    <meta name="description" content="Сайт для обміну книгами.">
     <meta name="keywords" content="Бар, буккросинг, Bookcrossing, книги">
     <meta name="author" content="Актив.БАР">
     <title>Буккросинг Бар</title>
@@ -21,6 +21,10 @@
             font-weight: bold!important;
         }
     </style>
+    <script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        VK.init({apiId: 5009365, onlyWidgets: true});
+    </script>
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -43,9 +47,14 @@
     <footer>
         <p class="pull-right"><a href="#">Піднятись вгору</a></p>
         <p>© 2015 v0.9.5</p>
-
+        <div id="vk_subscribe"></div>
+        <div id="vk_subscribe2"></div>
     </footer>
 </div>
 </div>
+<script type="text/javascript">
+    VK.Widgets.Subscribe("vk_subscribe", {mode: 2}, -96921760);
+    VK.Widgets.Subscribe("vk_subscribe2", {mode: 2}, 99296865);
+</script>
 </body>
 </html>
