@@ -135,7 +135,7 @@
                 </div>
             </nav>
 
-
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
             <div class="tab-content">
                 <div id="tab1" class="tab-pane fade in active">
                     @yield('main')
@@ -164,7 +164,6 @@
         <div id="vk_subscribe2"></div>
     </footer>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript">
     VK.init({
         apiId: 5177217
