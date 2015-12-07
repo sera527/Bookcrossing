@@ -12,15 +12,9 @@
 
     <!-- Bootstrap -->
     <link rel="shortcut icon" href="favicon.png"/>
-    <link href="http://ajax.aspnetcdn.com/ajax/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/material-fullpalette.min.css" rel="stylesheet">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.3.0/css/ripples.min.css" rel="stylesheet">
-    <style>
-        .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover{
-            color: #333!important;
-            font-weight: bold!important;
-        }
-    </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.2/css/bootstrap-material-design.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.2/css/ripples.min.css" rel="stylesheet">
     <script src="//vk.com/js/api/openapi.js" type="text/javascript"></script>
     <script type="text/javascript">
         VK.init({apiId: 5177217, onlyWidgets: true});
@@ -108,25 +102,40 @@
     </div>
 
     <div class="row">
+
         <div id="main" style="background-color: #eee; color: #333" class="col-lg-9 navbar navbar-default" hidden>
-            <div style="background-color: #009688;" class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-            </div>
-            <div style="background-color: #009688;" class="navbar-collapse collapse navbar-responsive-collapse">
-                <ul class="nav navbar-nav">
-                    <li @yield('active1')><a data-toggle="tab" href="@yield('href1')">Вільні книжки</a></li>
-                    <li @yield('active2')><a data-toggle="tab" href="@yield('href2')">Додати книгу</a></li>
-                    <li @yield('active3')><a data-toggle="tab" href="@yield('href3')">Мій кабінет</a></li>
-                    <li><a href="Notifications.html">Сповіщення</a></li>
-                    <li @yield('active4')><a data-toggle="tab" href="#tab4">Історія книгооберту</a></li>
-                    <li><a href="https://uk.wikipedia.org/wiki/%D0%91%D1%83%D0%BA%D0%BA%D1%80%D0%BE%D1%81%D0%B8%D0%BD%D0%B3">Що
-                            таке буккросинг?</a></li>
-                </ul>
-            </div>
+
+            <nav class="navbar navbar-default">
+                <div class="container">
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                    </div>
+                    <div class="navbar-collapse collapse">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Вільні книжки</a></li>
+                            <li><a href="#about">Додати книгу</a></li>
+                            <li><a href="#contact">Сповіщення</a></li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Мій кабінет<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#">Взята книга</a></li>
+                                    <li><a href="#">Віддані</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#contact">Історія книгооберту</a></li>
+                            <li><a href="https://uk.wikipedia.org/wiki/%D0%91%D1%83%D0%BA%D0%BA%D1%80%D0%BE%D1%81%D0%B8%D0%BD%D0%B3">Що
+                                    таке буккросинг?</a></li>
+                        </ul>
+                    </div><!--/.nav-collapse -->
+                </div>
+            </nav>
+
+
             <div class="tab-content">
                 <div id="tab1" class="tab-pane fade in active">
                     @yield('main')
@@ -155,7 +164,7 @@
         <div id="vk_subscribe2"></div>
     </footer>
 </div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <script type="text/javascript">
     VK.init({
         apiId: 5177217
@@ -188,6 +197,12 @@
         $('#vk_like').hide();
         $('#login_button').show();
     }
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.2/js/material.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-material-design/0.5.2/js/ripples.js"></script>
+<script>
+    $.material.init();
 </script>
 </body>
 </html>
