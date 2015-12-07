@@ -159,7 +159,7 @@
     <hr>
     <footer>
         <p class="pull-right"><a href="#">Піднятись вгору</a></p>
-        <p>© 2015 v0.9.5</p>
+        <p>© 2015 {{ $version }}</p>
         <div id="vk_subscribe"></div>
         <div id="vk_subscribe2"></div>
     </footer>

@@ -18,7 +18,10 @@ class Index extends Controller
     public function index()
     {
         $books = Books::all();
-        return view('index', ['books' => $books]);
+        $fp = fopen('../version.txt', 'r');
+        $version = file_get_contents("../version.txt");
+        fclose($fp);
+        return view('index', ['books' => $books, 'version' => $version]);
     }
 
     /**
