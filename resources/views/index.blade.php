@@ -1,6 +1,8 @@
 @extends('base')
+
 @section('active1', " class='active'")
 @section('href1', '#')
+
 @section('main')
         @foreach($books as $book)
             <div style='padding: 10px' class='book" + r[i][0] + " row'>
@@ -19,19 +21,7 @@
                     </form>
                 </div>
             </div>
-            <script>
-                VK.Api.call('users.get', {user_ids: {{ $book->user }} }, function (r) {
-                    if (r.response) {
-                        aa = r.response[0].first_name + ' ' + r.response[0].last_name;
-                        $(a[id = {{ $book->id }}]).text(aa);
-                    }
-                });
-            </script>
         @endforeach
 @stop
-@section('js')
-    $('[target = _blank]').each(function(){
-        var id = $().attr("")
-    });
-@stop
+
 
