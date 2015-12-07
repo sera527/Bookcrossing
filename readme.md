@@ -5,7 +5,7 @@ The site is written using Twitter Bootstrap, jQuery, Laravel framework and VK Op
 Now the site is under construction, but soon this project will become a convenient platform for sharing books.
 
 You can get acquainted with our achievements by reference http://bookcrossing.azurewebsites.net.
-#### Importantly! To use the site, you need to log in via Vkontakte.
+###### Importantly! To use the site, you need to log in via Vkontakte.
 
 If you want to develop the project with us, please send an e-mail to Sergiy Posternak at serpos95@gmail.com.
 
