@@ -8,6 +8,13 @@ You can get acquainted with our achievements by reference http://bookcrossing.az
 
 If you want to develop the project with us, please send an e-mail to Sergiy Posternak at serpos95@gmail.com.
 
+### Install
+
+Require this package with composer using the following command:
+
+```bash
+composer require sera527/bookcrossing:dev-master
+```
 
 ### License
 
