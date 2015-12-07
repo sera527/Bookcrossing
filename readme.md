@@ -8,6 +8,10 @@ You can get acquainted with our achievements by reference http://bookcrossing.az
 
 If you want to develop the project with us, please send an e-mail to Sergiy Posternak at serpos95@gmail.com.
 
+###Requires
+
+php: >=5.5.9
+
 ### Install
 
 Require this package with composer using the following command:
