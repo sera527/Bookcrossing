@@ -108,25 +108,32 @@
     </div>
 
     <div class="row">
-        <div class="col-lg-9">
-            @section('main')
-            @stop
+        <div id="main" style="background-color: #eee; color: #333" class="col-lg-9 navbar navbar-default" hidden>
+            <div style="background-color: #009688;" class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+            </div>
+            <div style="background-color: #009688;" class="navbar-collapse collapse navbar-responsive-collapse">
+                <ul class="nav navbar-nav">
+                    <li @yield('active1')><a data-toggle="tab" href="@yield('href1')">Вільні книжки</a></li>
+                    <li @yield('active2')><a data-toggle="tab" href="@yield('href2')">Додати книгу</a></li>
+                    <li @yield('active3')><a data-toggle="tab" href="@yield('href3')">Мій кабінет</a></li>
+                    <li><a href="Notifications.html">Сповіщення</a></li>
+                    <li @yield('active4')><a data-toggle="tab" href="#tab4">Історія книгооберту</a></li>
+                    <li><a href="https://uk.wikipedia.org/wiki/%D0%91%D1%83%D0%BA%D0%BA%D1%80%D0%BE%D1%81%D0%B8%D0%BD%D0%B3">Що
+                            таке буккросинг?</a></li>
+                </ul>
+            </div>
+            <div class="tab-content">
+                <div id="tab1" class="tab-pane fade in active">
+                    @yield('main')
+                </div>
+            </div>
         </div>
         <div class="col-lg-3">
-            <div style="padding: 5px" id="vk_post_-@yield('post_id')"></div>
-            <script type="text/javascript">
-                (function (d, s, id) {
-                    var js, fjs = d.getElementsByTagName(s)[0];
-                    if (d.getElementById(id)) return;
-                    js = d.createElement(s);
-                    js.id = id;
-                    js.src = "//vk.com/js/api/openapi.js?116";
-                    fjs.parentNode.insertBefore(js, fjs);
-                }(document, 'script', 'vk_openapi_js'));
-                (function () {
-                    if (!window.VK || !VK.Widgets || !VK.Widgets.Post || !VK.Widgets.Post("vk_post_-98669376_4", -98669376, 4, 'dl9-rKUkDGATMgUJZoXF2_9TAHU', {width: 280})) setTimeout(arguments.callee, 50);
-                }());
-            </script>
             <div style="padding: 5px" id="vk_groups" class="center-block"></div>
             <script type="text/javascript">
                 VK.Widgets.Group("vk_groups", {
